@@ -1,0 +1,242 @@
+:root {
+    --primary-color: #1db954;
+    --body-color: #eee;
+    --dashboard-color: #fff;
+    --black-color: #000;
+    --white-color: #fff;
+    --hover-btn-background-color: rgba(0, 0, 0, 0.08);
+    --gray-light-color: #ccc;
+    --gray-color: #666;
+    --box-shadow-playlist: rgba(100, 100, 111, 0.2);
+}
+
+[data-theme="dark"] {
+    --primary-color: #1db954;
+    --body-color: #22272e;
+    --dashboard-color: #2d333b;
+    --black-color: #fff;
+    --white-color: #000;
+    --hover-btn-background-color: rgba(255, 255, 255, 0.08);
+    --gray-light-color: #666;
+    --gray-color: #ccc;
+    --box-shadow-playlist: rgba(160, 160, 175, 0.2);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--body-color);
+    transition: background 0.5s;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.main {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--black-color);
+}
+.header .image img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 40px;
+}
+.containter-main {
+    padding: 20px;
+    background-color: var(--dashboard-color);
+    border-radius: 16px;
+    box-shadow: -2px 0px 10px 0px var(--box-shadow-playlist);
+    flex: 3;
+}
+.contact {
+    margin: auto;
+}
+.contact ul li {
+    position: relative;
+    list-style: none;
+    display: flex;
+    margin: 20px;
+    padding-left: 40px;
+    align-items: center;
+    border-bottom: #000 1px solid;
+}
+.contact ul li {
+    margin-right: 15px;
+}
+.contact ul li a{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.contact ul li i {
+    color: var(--black-color);
+}
+.contact ul li i::before {
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    border-radius: 34px;
+    transition-delay: 0.25s , 0s;
+    transition: background 0.5s, width 0.5s;
+    padding: 0px 15px;
+    box-sizing: border-box;
+}
+.contact ul li i:hover::before {
+    width: 100%;
+    background: #03a9f4;
+    color: #fff;
+    transition-delay: 0s , 0.25s;
+    height: 100%;
+}
+.contact ul li p {
+    color: var(--black-color);
+    z-index: 10;
+    position: relative;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+.footer {
+    text-align: center;
+    color: var(--black-color);
+}
+/* HEADER */
+header {
+    text-align: center;
+    margin-bottom: 15px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+header h4 {
+    color: var(--primary-color);
+    font-size: 16px;
+}
+
+header h2 {
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    color: var(--black-color);
+}
+
+/* Singer Name */
+header p {
+    color: var(--gray-color);
+    font-size: 16px;
+    font-style: italic;
+}
+
+.theme-switch-wrapper {
+    text-align: right;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 25px;
+    position: relative;
+    width: 45px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: transparent;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+}
+
+.slider:before {
+    content: "🌙";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: var(--white-color);
+    background-color: var(--black-color);
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+    height: 15px;
+    width: 15px;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: transparent;
+}
+
+input:checked + .slider::before {
+    content: "☀️";
+    transform: translateX(20px);
+}
+
+.slider.round {
+    border-radius: 34px;
+    border: 1px solid var(--black-color);
+}
+
+.slider.round::before {
+    border-radius: 50%;
+}
+
+  
+/* PC */
+@media (min-width: 1024px) {
+
+}
+
+/* Tablet & Mobile */
+@media (max-width: 1023px) {
+    
+}
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .header .image img {
+        width: 100px;
+        height: 100px;
+        margin-right: 10px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    li {
+        font-size: 14px;
+    }
+    p {
+        font-size: 14px;
+    }
+}
