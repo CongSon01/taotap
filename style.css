@@ -43,11 +43,43 @@ html {
     margin: auto;
     display: flex;
 }
+.image-header {
+    background-image: url('./img/bia.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    width: 100%;
+    padding: 20px;
+}
+.infor {
+    display: inline-block;
+}
+.work p{
+    overflow: hidden;
+    white-space: nowrap;
+    animation:
+        typing 3s steps(40) infinite normal both,
+        blink-caret 500ms steps(40) infinite normal;
+}
+/* The typing effect */
+@keyframes typing {
+    from { width: 30% }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+
+  
 .header {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--black-color);
+    color: #000;
 }
 .header .image img{
     width: 200px;
@@ -64,6 +96,7 @@ html {
 }
 .contact {
     margin: auto;
+    padding: 15px;
 }
 .contact ul li {
     position: relative;
@@ -120,6 +153,31 @@ html {
     text-align: center;
     color: var(--black-color);
 }
+.icon-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-logo img{
+    width: 40px;
+    border-radius: 50%;
+}
+.icon-logo span {
+    font-weight: 700;
+    margin-right: 10px;
+}
+.footer p{
+    animation: blinker 2s linear infinite;
+}
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+    100% {
+        color: #03a9f4;
+    }
+  }
 /* HEADER */
 header {
     text-align: center;
@@ -201,7 +259,7 @@ input:checked + .slider::before {
 
 .slider.round {
     border-radius: 34px;
-    border: 1px solid var(--black-color);
+    border: 1px solid #000;
 }
 
 .slider.round::before {
